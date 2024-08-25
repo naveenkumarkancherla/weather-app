@@ -1,0 +1,70 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent scrolling if not needed */
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    overflow: hidden; /* Hide overflow if necessary */
+  }
+  
+  .weather-container {
+    display: flex;
+    height: 100%; /* Take up full height of the app-container */
+    width: 100%;  /* Take up full width of the app-container */
+  }
+  
+  .left-container {
+    flex: 0 0 30%; /* 30% width */
+    height: 100%;  /* Full height */
+    overflow-y: auto; /* Scroll if content exceeds height */
+    background-color: #f0f0f0; /* Example background color */
+  }
+  
+  .right-container {
+    flex: 1; /* Take remaining space */
+    height: 100%; /* Full height */
+    overflow-y: auto; /* Scroll if content exceeds height */
+    background-color: #ffffff; /* Example background color */
+  }
+  
+  /* Animation styles */
+  .animate__animated {
+    animation-duration: 1s;
+  }
+  
+  .animate__fadeIn {
+    animation-name: fadeIn;
+  }
+  
+  .animate__fadeInUp {
+    animation-name: fadeInUp;
+  }
+  
+  /* Add keyframes for animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
